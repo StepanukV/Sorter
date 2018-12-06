@@ -3,4 +3,23 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use sorterApp\RsortArray;
+use sorterApp\SortArray;
+use sorterApp\StrategyContext;
+
+
+
+$num = [1,2,5,23,111,3,5];
+$strings = ['Petrov','Ivanov','Sidorov','Aaa'];
+
+
+$data = new StrategyContext($strings);
+$data->setStrategy(new SortArray());
+var_dump($data->sort());
+
+$newdata1 =new StrategyContext($num);
+$newdata1->setStrategy(new RsortArray());
+var_dump($newdata1->sort());
+
+
 

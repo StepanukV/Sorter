@@ -9,7 +9,12 @@
 namespace sorterApp;
 
 
-class SortArray
-{
 
+class SortArray implements Strategy
+{
+    public function sort($data)
+    {
+        sort($data);
+        return $data;
+    }
 }

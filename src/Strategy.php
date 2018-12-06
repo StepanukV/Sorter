@@ -9,7 +9,8 @@
 namespace sorterApp;
 
 
+
 interface Strategy
 {
-
+    public function sort($data);
 }
