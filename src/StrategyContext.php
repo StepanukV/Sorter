@@ -1,20 +1,22 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rayzer
- * Date: 06.12.18
- * Time: 16:27
+
+/*
+ * This file is part of the "Sort array lib" package.
+ *
+ * (c) Stepanuk Vasiliy rayzer1423@gmail.com
+ *
  */
 
 namespace sorterApp;
 
-
+/**
+ * Class StrategyContext basic logic sorting
+ * @package sorterApp
+ */
 class StrategyContext
 {
     public $data =[];
     private $strategy;
-
-
     /**
      * StrategyContext constructor.
      * @param array $data
@@ -25,15 +27,18 @@ class StrategyContext
     }
     /**
      * @param mixed $strategy
+     * chose strategy to sort
      */
-    public function setStrategy(Strategy $strategy): void
+    public function setStrategy(StrategyInterface $strategy): void
     {
         $this->strategy = $strategy;
     }
 
-    public function sort()
+    /**
+     * @return array sorted array
+     */
+    public function sort(): array
     {
-        return $result= $this->strategy->sort($this->data);
+        return $this->strategy->sort($this->data);
     }
-
 }

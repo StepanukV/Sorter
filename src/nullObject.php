@@ -10,18 +10,17 @@
 namespace sorterApp;
 
 /**
- * Class SortArray sorting aray by ascending
+ * Class nullObject
  * @package sorterApp
  */
-class SortArray implements StrategyInterface
+final class nullObject implements StrategyInterface
 {
     /**
      * @param array $data
-     * @return sorted array
+     * @return array
      */
-    public function sort(array $data): array
+    public function sort(array $data)
     {
-        sort($data);
         return $data;
     }
 }
