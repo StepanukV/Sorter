@@ -6,6 +6,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use sorterApp\RsortArray;
 use sorterApp\SortArray;
 use sorterApp\StrategyContext;
+use sorterApp\StrategyFactory;
 
 
 
@@ -14,12 +15,18 @@ $strings = ['Petrov','Ivanov','Sidorov','Aaa'];
 
 
 $data = new StrategyContext($strings);
-$data->setStrategy(new SortArray());
+$factory = new StrategyFactory();
+$data->setStrategy($factory->construct('RSORT'));
 var_dump($data->sort());
 
-$newdata1 =new StrategyContext($num);
-$newdata1->setStrategy(new RsortArray());
-var_dump($newdata1->sort());
+$data2 = new StrategyContext($num);
+$factory2 = new StrategyFactory();
+$data2->setStrategy($factory->construct('SORT'));
+var_dump($data2->sort());
 
 
+$data3 = new StrategyContext($num);
+$factory3 = new StrategyFactory();
+$data2->setStrategy($factory->construct('Null'));
+var_dump($data3->sort());
 

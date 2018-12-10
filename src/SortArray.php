@@ -15,6 +15,7 @@ namespace sorterApp;
  */
 class SortArray implements StrategyInterface
 {
+    const ORDER = SORT;
     /**
      * @param array $data
      * @return sorted array

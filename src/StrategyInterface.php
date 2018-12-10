@@ -20,5 +20,5 @@ interface StrategyInterface
      * @param array $data Array with data to sort
      * @return array Sorted array
      */
-    public function sort(array $data): array ;
+    public function sort(array $data) ;
 }

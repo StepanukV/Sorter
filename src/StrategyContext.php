@@ -27,7 +27,7 @@ class StrategyContext
     }
     /**
      * @param mixed $strategy
-     * chose strategy to sort
+     * choose strategy to sort
      */
     public function setStrategy(StrategyInterface $strategy): void
     {

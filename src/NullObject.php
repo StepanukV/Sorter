@@ -13,8 +13,9 @@ namespace sorterApp;
  * Class nullObject
  * @package sorterApp
  */
-final class nullObject implements StrategyInterface
+final class NullObject implements StrategyInterface
 {
+    const ORDER = 'Null';
     /**
      * @param array $data
      * @return array
