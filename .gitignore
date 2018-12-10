@@ -12,3 +12,6 @@ composer.phar
 
 # PHP CS Fixer cache
 php_cs.cache
+
+#other
+phpunit.xml.dist
